@@ -1,63 +1,60 @@
 <div class="container-fluid remove-all-margin">
   <div class="hgt">
-    
-    <div class="sze">Journal of</div>
-    <div>Cardiac Interventions</div>
-  </div>
-</div>
-<div>
-
-</div>
-<div class="container-fluid remove-all-margin botop">
-  <div class="hgt1">
-    <div class="row">
-    <div class="col-lg-2 borgt">
-      <p>Journal Overview</p>
-    </div>
-    <div class="col-lg-2 borgt">
-      <p>For Authors</p>
-    </div>
-    <div class="col-lg-2 borgt">
-      <p>For Reviewers</p>
-    </div>
-    <div class="col-lg-2 borgt">
-      <p>For Editors</p>
-    </div>
-    <div class="col-lg-2 borgt">
-      <p>Table of Contents</p>
-    </div>
-    <div class="col-lg-2 borgt">
-      <p>Special Issues</p>
-    </div>
-  </div>
+    <div class="anchortag"><a routerLink="/home">Journal of Cardiac Interventions</a></div>
   </div>
 
-</div>
 
-<div class="container">
-  <h2>Modal Example</h2>
-  <!-- Trigger the modal with a button -->
-  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light hgt1">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse"
+     data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+      aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown" [ngClass]="{ 'show': navbarOpen }">
+      <ul class="navbar-nav col-lg-12">
+        
+        <li class="nav-item dropdown col-lg-2 ">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Journal Overview
+          </a>
+          <div class="dropdown-menu clra" aria-labelledby="navbarDropdownMenuLink">
+            <!-- <a class="dropdown-item" href="#" (click)="toggleNavbar()">About Us</a> -->
+            <div class="row">
+            <div class="col-lg-6">
 
-  <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog">
-    
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>Some text in the modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-      
+              <a class="dropdown-item" routerLink="/aimandscope" (click)="toggleNavbar()">Aim and Scope</a>
+              <a class="dropdown-item" routerLink="/editorialboard" (click)="toggleNavbar()">Editorial Board</a>
+              <a class="dropdown-item" routerLink="/authors-index" (click)="toggleNavbar()">Authors Index</a>
+              <a class="dropdown-item" routerLink="/indexing" (click)="toggleNavbar()">Indexing and Abstracting</a>
+            </div>
+            <div class="col-lg-6">
+
+              <a class="dropdown-item" routerLink="/publication-ethics" (click)="toggleNavbar()">Publication Ethics</a>
+              <a class="dropdown-item" routerLink="/apc" (click)="toggleNavbar()">Article Processing Charges</a>
+              <a class="dropdown-item" routerLink="/openaccesspolicy" (click)="toggleNavbar()">Open Access Policy</a>
+              <a class="dropdown-item" routerLink="/peerreviewpolicy" (click)="toggleNavbar()">Peer Review Policy</a>
+            </div>
+          </div>
+          </div>
+        </li>
+        <li class="nav-item col-lg-2">
+          <a class="nav-link" routerLink="/authors" routerLinkActive = "active" (click)="toggleNavbar()">For Authors</a>
+        </li>
+        <li class="nav-item col-lg-2">
+          <a class="nav-link" routerLink="/reviewers" routerLinkActive = "active" (click)="toggleNavbar()">For Reviewers</a>
+        </li>
+        <li class="nav-item col-lg-2">
+          <a class="nav-link" routerLink="/editors" routerLinkActive = "active" (click)="toggleNavbar()">For Editors</a>
+        </li>
+        <li class="nav-item col-lg-2">
+          <a class="nav-link" routerLink="/archive" routerLinkActive = "active" (click)="toggleNavbar()">Archive</a>
+        </li>
+        <li class="nav-item col-lg-2">
+          <a class="nav-link" routerLink="/specialissue" routerLinkActive = "active" (click)="toggleNavbar()">Special Issues</a>
+        </li>
+      </ul>
     </div>
-  </div>
-  
+  </nav>
 </div>
